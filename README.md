@@ -13,8 +13,7 @@ Configured to use the USBTiny ISP. Update the Vagrantfile to support different I
 
 1. Install VirtualBox with the extension pack (required for USB).
 2. Create a directory `avr_development` at the same level as the `avr_toolchain` project. This is a shared directory for any code files.
-3. Enable USB and the USBtiny for this VM in VirtualBox.
-4. `vagrant up`
+3. `vagrant up`
 5. `vagrant ssh`
 6. Verify communication with USBtiny
   1. Unplug/plug USBtiny
