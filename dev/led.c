@@ -1,17 +1,3 @@
-docker run -it avr_temp_build bash
-
-
-docker build -t avr_temp_build .
-
-
-http://stackoverflow.com/questions/24225647/docker-any-way-to-give-access-to-host-usb-or-serial-device
-http://maxembedded.com/2015/06/setting-up-avr-gcc-toolchain-on-linux-and-mac-os-x/
-
-docker run -it --device=/dev/ttyUSB0 ubuntu bash
-
-docker run -it --device=/dev/bus/usb:/dev/bus/usb:rwm lastzactionhero/avr bash
-
-
 #ifndef F_CPU
 #define F_CPU 16000000UL // or whatever may be your frequency
 #endif
@@ -33,7 +19,3 @@ int main(void)
         _delay_ms(500);                // wait 500 milliseconds
     }
 }
-
-avr-gcc -g -Os -mmcu=atmega32 -c led.c
-avr-gcc -g -o led.elf led.o
-avr-objcopy -j .text -j .data -O ihex led.elf led.hex
