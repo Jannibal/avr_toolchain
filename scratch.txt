@@ -34,6 +34,6 @@ int main(void)
     }
 }
 
-avr-gcc -g -Os -mmcu=atmega32 -c led.c
+avr-gcc -g -Os -mmcu=atmega328p -c led.c
 avr-gcc -g -o led.elf led.o
 avr-objcopy -j .text -j .data -O ihex led.elf led.hex
