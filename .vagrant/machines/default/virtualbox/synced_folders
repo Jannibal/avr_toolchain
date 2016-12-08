@@ -1,1 +1,0 @@
-{"virtualbox":{"/development":{"guestpath":"/development","hostpath":"/Users/zach/development/avr/development","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/zach/development/avr","disabled":false,"__vagrantfile":true}}}
