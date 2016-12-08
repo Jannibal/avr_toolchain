@@ -24,6 +24,18 @@ Configured to use the USBTiny ISP. Update the Vagrantfile to support different I
 
 Compile to hex:
 ```
+// Compile
 avr-gcc -g -Os -mmcu=atmega328p -c myfile.c
-avr-gcc -g -o myfile.elf myfile.o
+
+// Link
+avr-gcc -g -mmcu=atmega328p -o myfile.elf myfile.o
+
+// Load File
 avr-objcopy -j .text -j .data -O ihex myfile.elf myfile.hex
+```
+
+## Upload
+
+```
+avrdude -p m328p -c usbtiny -F -U flash:w:myfile.hex:i
+```
